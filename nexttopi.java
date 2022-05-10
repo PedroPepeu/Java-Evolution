@@ -1,5 +1,3 @@
-package P1;
-
 import java.util.Scanner;
 
 public class nexttopi {
@@ -7,16 +5,16 @@ public class nexttopi {
 
         Scanner sc = new Scanner (System.in);
 
-        double n, interation =0, nPointsInCircle=0;
+        double num, interation =0, nPointsInCircle=0;
         double x=0, y=0, PI=0;
 
-        n = sc.nextInt();
+        num = sc.nextInt();
 
-        while(interation < n) {
+        while(interation < num) {
             x = (Math.random() * 2) - 1;
             y = (Math.random() * 2) - 1;
 
-            boolean isInsideCircle = Math.pow(x, 2) + Math.pow(y, 2) <= 1;
+            boolean isInsideCircle = insideCircle(x, y);
 
             if(isInsideCircle) {
                 nPointsInCircle++;
@@ -26,7 +24,7 @@ public class nexttopi {
             }
         }
         
-        PI = (4* nPointsInCircle) / n;
+        PI = (4* nPointsInCircle) / num;
 
         System.out.printf("%f\n", PI);
 
@@ -34,4 +32,12 @@ public class nexttopi {
 
         sc.close();
     }
+
+    public static boolean insideCircle (double z, double w) {
+        if(Math.pow(z, 2) + Math.pow(w, 2) <=1) {
+            return true;
+        }
+        return false;
+    }
+
 }
