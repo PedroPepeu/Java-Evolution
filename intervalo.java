@@ -1,13 +1,15 @@
 import java.io.IOException;
 import java.util.Scanner;
-public class Main {
+public class intervalo {
  
     public static void main(String[] args) throws IOException {
  
         Scanner sc = new Scanner (System.in);
+
         
         int num = sc.nextInt();
-        
+        int x = num;
+
         if(x >= 0 && x <= 25) {
             System.out.println("Intervalo [0,25]");
         } else if (x > 25 && x <= 50) {
