@@ -7,8 +7,8 @@ public class recurs2 {
     }
 
     static void p() {
-        System.out.println("Recursion");
         int count = 0;
+        System.out.println("Recursion"+count);
         while (count < 5) {
             count++;
             p();
