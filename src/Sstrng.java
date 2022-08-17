@@ -27,7 +27,7 @@ public class Sstrng {
 
         String noIdea = "10";
         String stillNoCreative = "20";
-        System.out.println(noidea + stillnocreative); // 1020, in reason of it's string
+        System.out.println(noIdea + stillNoCreative); // 1020, in reason of it's string
         
         int imThinkingOK = 10;
         String notYet = "20";
