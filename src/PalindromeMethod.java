@@ -12,23 +12,27 @@ public class PalindromeMethod {
             aSequence[i] = i;
         }
 
-        checkPalindrome (aSequence);
+        int i = 0, j = aSequence.length;
+
+        checkPalindrome (aSequence, i, j);
 
         sc.close();
 
     }
 
-    static boolean checkPalindrome (int[] x) {
+    static boolean checkPalindrome (int[] x, y, z) {
 
         if(x.length == 1) {
             return true;
         }
 
-        for(int i = 0, j = x.length - 1; i < j; i++, j--) {
+        /*for(int i = 0, j = x.length - 1; i < j; i++, j--) {
             if(i != j) {
                 return false;
             }
-        }
+        }*/
+
+        if(i < j)
 
         return true;
         
