@@ -1,40 +1,27 @@
-import java.util.Scanner;
-
 public class PalindromeMethod {
     public static void main(String[] args) {
 
-        Scanner sc = new Scanner(System.in);
-        
-        int x = sc.nextInt();
-        int[] aSequence = new int[x];
-
-        for(int i = 0; i < aSequence.length; i++) {
-            aSequence[i] = i;
-        }
-
-        int i = 0, j = aSequence.length;
-
-        checkPalindrome (aSequence, i, j);
-
-        sc.close();
+        int [] arr = {1, 2, 6, 6, 2, 1};
+        recur(0, arr, arr.length - 1);
 
     }
 
-    static boolean checkPalindrome (int[] x, y, z) {
+    public static void recur(int i, int[] a, int j) {
 
-        if(x.length == 1) {
-            return true;
+        if(a.length == 1) {
+            System.out.println("Pass");
+            return;
         }
-
-        /*for(int i = 0, j = x.length - 1; i < j; i++, j--) {
-            if(i != j) {
-                return false;
-            }
-        }*/
-
-        if(i < j)
-
-        return true;
         
+        if (i > a.length - 1) {
+            System.out.println("Pass");
+            return;
+        } else {
+            if (a[i] != a[j]) {
+                System.out.println("Do not pass");
+                return;
+            }
+            recur(i + 1, a, j - 1);
+        }
     }
 }
