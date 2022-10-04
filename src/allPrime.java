@@ -18,7 +18,9 @@ public class allPrime {
                 }
             }
             if(temp > 0) {
-                System.out.println("");
+                continue;
+            } else {
+                System.out.println(num+" is prime");
             }
         }
     }
